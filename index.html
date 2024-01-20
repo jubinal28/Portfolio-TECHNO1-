@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Portfolio Website</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">Dominic Jubinal</a>
+		<div class="menuToggle"></div>
+		<ul class="nav">
+			<li class="active"><a href="#home">Home</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</header>
+	<section id="home">
+		<div class="content">
+			<h2>Dominic Jubinal</h2>
+			<p>I am a passionate and versatile professional with a keen interest in the intersection of technology and creativity. With a strong foundation in web designing, web development, Android app development, and game development, I bring a diverse set of skills to the table. My journey in the digital realm has allowed me to seamlessly blend artistic vision with technical expertise. Whether I'm crafting visually engaging websites, developing immersive games, or contributing to innovative Android applications, I am committed to delivering impactful and user-centric solutions. I thrive on challenges, continually expanding my skill set, and staying abreast of the latest industry trends in game development and technology. Let's collaborate to bring ideas to life and create meaningful digital experiences.</p>
+			<a href="#contact" class="btn">Contact Me</a>
+		</div>
+		<img src="images/me.png" class="men">
+	</section>
+	<section id="skills">
+		<div class="secText">
+			<h2>What I Am Great At</h2>
+			<p>Skilled in web designing, I specialize in crafting visually appealing websites using tools like Adobe Photoshop and Figma. My web development expertise spans both front-end (HTML, CSS, JavaScript) and back-end (Python, Node.js, PHP) technologies, with proficiency in frameworks like React. Additionally, I excel in Android app development, programming in Java or Kotlin using Android Studio, and seamlessly integrating functionalities. With a passion for game development, I bring creativity to the digital realm by contributing to engaging and immersive gaming experiences. My skills extend to crafting interactive and dynamic gameplay elements, collaborating with diverse teams to bring gaming concepts to life. Let's embark on a journey to create captivating digital worlds and experiences together.</p>
+		</div>
+		<div class="container">
+			<div class="card">
+				<div class="lines"></div>
+				<div class="imgBx">
+					<img src="images/icon1.png">
+				</div>
+				<div class="content">
+					<div class="details">
+						<h2>Web Design</h2>
+						<p>I specialize in creating visually appealing websites with a focus on graphic design and user experience.</p>
+						<a href="#">Read More</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="lines"></div>
+				<div class="imgBx">
+					<img src="images/icon2.png">
+				</div>
+				<div class="content">
+					<div class="details">
+						<h2>Web Development</h2>
+						<p> Proficient in both front-end and back-end development, I use technologies like HTML, CSS, JavaScript, and Python to build seamless and functional websites.</p>
+						<a href="#">Read More</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="lines"></div>
+				<div class="imgBx">
+					<img src="images/icon3.png">
+				</div>
+				<div class="content">
+					<div class="details">
+						<h2>Android Apps</h2>
+						<p>As an Android app developer, I craft innovative mobile applications using Java and Kotlin, ensuring a user-friendly interface.</p>
+						<a href="#">Read More</a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="lines"></div>
+				<div class="imgBx">
+					<img src="images/icon4.png">
+				</div>
+				<div class="content">
+					<div class="details">
+						<h2>Game Developer</h2>
+						<p>In game development, I create immersive experiences by combining programming skills and creative vision to design captivating and interactive games.</p>
+						<a href="#">Read More</a>
+					</div>
+				</div>
+		</div>
+		<div class="center">
+			<a href="resume.pdf" class="btn" target="_blank">Download CV</a>
+		</div>
+	</section>
+	<section id="portfolio">
+		<div class="secText">
+			<h2>Projects</h2>
+		</div>
+		<div class="content">
+			<div class="imgBx">
+				<img src="images/img1.jpg" alt="">
+			</div>
+			<div class="imgBx">
+				<img src="images/img2.jpg" alt="">
+			</div>
+			<div class="imgBx">
+				<img src="images/img3.jpg" alt="">
+			</div> 
+			
+		</div>
+		<div class="center">
+			<a href="#" class="btn">View More</a>
+		</div>
+	</section>
+	<section id="contact">
+		<div class="secText">
+			<h2>Ways To Contact Me</h2>
+		</div>
+		<div class="content">
+			<a href="#">
+				<ion-icon name="mail-outline"></ion-icon> d.jubinal2001@gmail.com
+			</a>
+			<a href="#">
+				<ion-icon name="call-outline"></ion-icon> 0921-546-5108
+			</a>
+		
+			<a href="#">
+				<ion-icon name="logo-facebook"></ion-icon> facebook
+			</a>
+		
+			<a href="#">
+				<ion-icon name="logo-whatsapp"></ion-icon> whatsapp
+			</a>
+		</div>
+		<div class="center">
+			<p class="copyrights">Copyright © 2024 <a href="#">Dominic Jubinal</a>. All Right Reserved.</p>
+		</div>
+	</section>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script>
+		const list = document.querySelectorAll('.nav li');
+		function active(){
+			list.forEach((i) =>
+			i.classList.remove('active'));
+			this.classList.add('active');
+		}
+		list.forEach((i) =>
+		i.addEventListener('click', active));
+
+		let menuToggle = document.querySelector('.menuToggle');
+		let header = document.querySelector('header');
+		menuToggle.onclick = function(){
+			header.classList.toggle('active')
+		}
+	</script>
+	
+</body>
+</html>
